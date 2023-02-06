@@ -34,11 +34,45 @@ console.log(--value4); //value3 = value - 1
 console.log(value4);
 
 //logical operators:
-// &&	logical and l T && r T = T
-// ||	logical or
+// &&	logical and l T && r T = T 1*1 =1
+// ||	logical or  L F || R F = F 0*0=0
 // !	logical not
-var num1 = 20;
+var num1 = null;
 var num2 = 50;
 if(num1 > 80 && num2 < 80){
-console.log('kkkkkkkkkkkkk');
+console.log('ANDDDD');
 }
+
+if(num1 >= 80 || num2 <= 80){ 
+    console.log('ORRRRRRRR');
+}
+if(num2 == 50 && num1 == undefined  ){
+console.log('!!!!!!!!!!!!!!!111');
+}
+//= == === difference 
+
+var myRank = '2' //Assigment operator used to assign value to the variable
+var samRank = 2
+
+//equality operator
+if (myRank == samRank) {  //it will compare only value of variables
+    console.log('equality operator');
+}
+
+if (myRank === samRank) { //it will compare value as well as data type of variable
+    console.log('equality operator');
+}
+if(myRank !== samRank ){
+console.log('!== condition');
+}
+//? ternory operator :
+//condition-->(true)? true : false;
+let city = 50;
+
+if(city === 50){
+console.log('I live in mumbai');
+}else{
+console.log('i live pune');
+}
+
+city === 50 ? console.log('I live in mumbai') : console.log('i live pune');
