@@ -26,4 +26,18 @@ console.log(arrayItem);
 arrayItem.unshift(566,'pooja');
 console.log(arrayItem);
 arrayItem[3] = 500;
+console.log( '---->',arrayItem);
+
+arrayItem.splice(5,0,60,65)
 console.log(arrayItem);
+let num1 = [10,101,23,222];
+let num2 = [105,1061,623,2622];
+console.log(num2.concat('num1' ,'uuuu',2000));
+
+console.log(num2.slice(1));
+
+console.log(num2.reverse());
+let a = ['Abc','c','aBc','b','B']
+console.log(a.sort());
+console.log(num2.sort());
+
