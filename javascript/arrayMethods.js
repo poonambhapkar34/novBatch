@@ -3,7 +3,7 @@ console.log(arrayItem.length);
 let lastInd = arrayItem.length - 1;
 console.log(lastInd);
 //console.log(arrayItem.IndexOf('20')); not allowed with array
-delete arrayItem[2];
+delete arrayItem[2]; //56
 let data = arrayItem[2];
 console.log(typeof(data));
 console.log(arrayItem);

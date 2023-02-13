@@ -2,7 +2,7 @@ var data = 150;
 let convData = data.toString()
 console.log(convData);
 
-let x = 1.5654655;
+let x = 1.56546555555;
 console.log(x.toFixed(3));
 
 x = 2.5654655;

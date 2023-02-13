@@ -55,7 +55,7 @@ var myRank = '2' //Assigment operator used to assign value to the variable
 var samRank = 2
 
 //equality operator
-if (myRank == samRank) {  //it will compare only value of variables
+if (myRank == samRank) {  // equality operator it will compare only value of variables
     console.log('equality operator');
 }
 
