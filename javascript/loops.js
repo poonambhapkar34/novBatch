@@ -41,13 +41,15 @@ for(let j = 1 ; j<=10 ; j++){
 //     }
 // }
 
-let list1 = ['red','white','black','blue','yellow','orange'];
+let list1 = ['red','white','black','blue','','orange'];
 let newList3= [];
 for(let i = 0 ; i < list1.length ; i++ ){ //5<=5 i++ = i =i+1
    
-    if(i==3){ 
-      continue; //jumps in to the loop
+    // if(i==3){ 
+    //   continue; //jumps in to the loop
+    // }
+    if(list1[i] !='blue' ){
+        newList3.push(list1[i]); 
     }
-    newList3.push(list1[i]); 
     console.log('newList1-->',newList3); 
 }
