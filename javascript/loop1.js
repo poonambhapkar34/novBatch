@@ -2,7 +2,7 @@
 let cars = ['i10','i20','swift','jaguar','audi'];
 let carsNew = [];
 
-for(var item of cars){
+for(let item of cars){
     carsNew.push(item)
     //console.log(item);
 }
@@ -36,7 +36,8 @@ while(no > 10){
 
 let a = 10;
 do{
-    a++
     console.log(a);
+    a++;
+  
 }
 while(a < 15)
