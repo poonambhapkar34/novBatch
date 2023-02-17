@@ -1,9 +1,12 @@
 //forEach(para,index,array) loop
 
 let number = [10,20,30,40,50,60];
-let number2 = []
+let number2 = [];
 number.forEach(ele => {
-    number2.push(ele);
+    if (ele != 40) {
+        number2.push(ele);
+    }
+
 })
 console.log(number2);
 
@@ -29,7 +32,7 @@ var add3 = ()=>{
 console.log(add3());
 
 var add2 = (a,b)=>a+b;
-
+//var add5 = ()=>20=30;
 console.log(add2(30,30));
 
 var emp = [
@@ -39,7 +42,36 @@ var emp = [
     {name:'Rihan',age:50,sal:30000}
 ]
 
-var age = emp.filter(ele => {
-   return ele.age >=50
+var empData = emp.filter(element => {
+   return element.age >=50 && element.sal == 30000;
 })
-console.log('age',age);
+console.log('empData',empData);
+
+function test(){
+    let i = 30 ;
+    return ++i;
+}
+
+var valueOfI =  test();
+
+console.log('valueOfI',valueOfI);
+
+var empName = emp.map(item=> {
+    return item.name;
+});
+var emp_Name_age ={name :'' , age:''};
+emp.map(item=> {
+    emp_Name_age.name = item.name;
+    emp_Name_age.age = item.age;
+})
+console.log("emp_Name_age",emp_Name_age)
+console.log("empName--",empName);
+var zeroIndevValue ;
+ emp.map((item,ind)=>{
+  if(ind == 0){
+    zeroIndevValue = item;
+  }
+ 
+})
+console.log(zeroIndevValue);
+let chars = ['A','P', 'B','C','T','A','B','D','C']
