@@ -5,10 +5,11 @@
 
 let list = ['red','white','black','blue','yellow'];
 var newList = [];
-for(let i = 0 ; i < list.length ; i++ ){ //5<=5 i++ = i =i+1
-    newList.push(list[i]);  //list[0]
-    
+for(var u = 0 ; u < list.length ; ++u ){ //5<=5 i++ = i =i+1
+    newList.push(list[u]);  //list[0]
+    console.log(u);
 }
+console.log(u);
 console.log('newList-->',newList);
 
 let newList2 = [];
@@ -29,7 +30,7 @@ for(let i = 0 ; i < list.length ; i++ ){ //5<=5 i++ = i =i+1
 
 for(let j = 1 ; j<=10 ; j++){
     console.log(j);
-    if(j == '5'){
+    if(j == 5){
         break;
     }
 }

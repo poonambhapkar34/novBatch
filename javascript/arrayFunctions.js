@@ -59,13 +59,7 @@ console.log('valueOfI',valueOfI);
 var empName = emp.map(item=> {
     return item.name;
 });
-var emp_Name_age ={name :'' , age:''};
-emp.map(item=> {
-    emp_Name_age.name = item.name;
-    emp_Name_age.age = item.age;
-})
-console.log("emp_Name_age",emp_Name_age)
-console.log("empName--",empName);
+
 var zeroIndevValue ;
  emp.map((item,ind)=>{
   if(ind == 0){
@@ -75,3 +69,33 @@ var zeroIndevValue ;
 })
 console.log(zeroIndevValue);
 let chars = ['A','P', 'B','C','T','A','B','D','C']
+var newCars =  chars.filter((item, index) =>{
+  return  chars.lastIndexOf(item) === index
+} )
+console.log("chars---",newCars);
+var empNew = [
+    {name:'Rohan',age:50,sal:30000},
+    {name:'Rohit',age:60,sal:20000},
+    {name:'Roy',age:30,sal:40000},
+    {name:'Rihan',age:50,sal:30000}
+]
+
+
+// empNew.map(item=> {
+//     emp_Name_age.name = item.name;
+//     emp_Name_age.age = item.age;
+// })
+// console.log("emp_Name_age",emp_Name_age)
+// console.log("empName--",empName);
+var emp_Name_age = Object.keys(empNew).map(item=>{
+    console.log(item);
+    return  empNew[item] 
+})
+console.log("emp_Name_age",emp_Name_age)
+
+let a = 'i like mango i live in mumbai mango mumbai live'// assigment : remove duplicate words from string
+
+var arr = ["apple", "mango", "apple","orange", "mango", "mango"];
+
+  var arrNew =  [...new Set(arr)];
+console.log(arrNew)

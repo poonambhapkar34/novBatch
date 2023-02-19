@@ -41,3 +41,6 @@ let a = ['Abc','c','aBc','b','B']
 console.log(a.sort());
 console.log(num2.sort());
 
+1
+121
+1331
