@@ -80,7 +80,8 @@ var empNew = [
     {name:'Rihan',age:50,sal:30000}
 ]
 
-
+let y = empNew.map(({name,age})=>({name,age}))
+console.log('y',y);
 // empNew.map(item=> {
 //     emp_Name_age.name = item.name;
 //     emp_Name_age.age = item.age;
