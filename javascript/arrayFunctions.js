@@ -100,3 +100,16 @@ var arr = ["apple", "mango", "apple","orange", "mango", "mango"];
 
   var arrNew =  [...new Set(arr)];
 console.log(arrNew)
+
+function display() { 
+    if(true){
+        var a = 10;
+        var b = 10;
+        var y=x=50;
+        let d;
+        var z = x;
+        var t = d;
+    }
+   console.log(a , b ,x, y,z,t);
+ } 
+display();

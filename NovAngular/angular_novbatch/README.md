@@ -32,5 +32,17 @@ powershell unathourity error:
 set-ExecutionPolicy RemoteSigned -Scope CurrentUser 
 Get-ExecutionPolicy
 // to creat new poroject :  ng new project_name
+If u r facing error inbetween project creation :
+node_module is their : simply delete it and run cmd: nmp i /npm i -f
 //to run angular appliction : ng serve --open /ng s -o/ ng s / ng serve
-common mistake Error: This command is not available when running the Angular CLI outside a workspace. : u r running serve command outside project name folde: to remove this open terminal on ur project name and do ng s.
+
+common mistake Error: This command is not available when running the Angular CLI outside a workspace. : u r running serve command outside project name folder: to remove this open terminal on ur project name and do ng s.
+//organisation:
+url : to clone project 
+steps: 1. folder >>right git bash here >> terminal git clone "url" >> credintials >>enter
+2. open cloned project into vs code 
+3.check for node_module folder :it should not their, >>>
+4. npm i
+if facing error: npm i -f
+again delet node_module folder and again do npm i or npm i -f.
+>>if did successufull installaion of npm pcks>> ng s/cmd will given to u by ur team memers to serve application

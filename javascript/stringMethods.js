@@ -36,5 +36,5 @@ myName1 = myName.trim();
 console.log(myName1);
 
 var DOB = '10/10/2010';
-let DOB1 = DOB.split("/");
+let DOB1 = DOB.split("/"); //it will return array
 console.log(DOB1);
