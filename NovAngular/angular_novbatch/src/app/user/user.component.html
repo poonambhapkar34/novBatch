@@ -1,1 +1,9 @@
 <p>user works!</p>
+<h1>headerrrrrr</h1>
+<input type="text" #inputBox (keyup)="myFunction(inputBox.value)" >Enter Name Here....
+<button (click)="myFunction(inputBox.value)">click</button>
+input box Value : {{inputBoxValue}}
+
+<div (mouseover)="myEvent('mouse in')">
+    mouse over evnt
+</div>

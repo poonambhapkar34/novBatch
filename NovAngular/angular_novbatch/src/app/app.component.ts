@@ -11,6 +11,7 @@ export class AppComponent { //main component class : where we write code logic
   mySurname : string = 'patil';
   mySurname2? : string; //syntax change 
  // mySurname2 : string;
+ testProperty : any = 5000;
 
   constructor(){  // constructor : just normal function but it will triger implicity by compiler
       console.log('inside constuctor..');
@@ -22,6 +23,7 @@ export class AppComponent { //main component class : where we write code logic
   }
 
   test2(){
+    this.mySurname2 = this.mySurname;
     this.test();
   }
 
