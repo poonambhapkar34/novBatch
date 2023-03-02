@@ -1,9 +1,15 @@
 <p>user works!</p>
 <h1>headerrrrrr</h1>
-<input type="text" #inputBox (keyup)="myFunction(inputBox.value)" >Enter Name Here....
+<input type="text" name="input" #inputBox (keyup)="myFunction(inputBox.value)" (blur)="blurEvent()" >Enter Name Here....
+<input type="text" name="input" (keyup)="myFunction1($event)" >Enter Name Here....
 <button (click)="myFunction(inputBox.value)">click</button>
 input box Value : {{inputBoxValue}}
 
-<div (mouseover)="myEvent('mouse in')">
+<!-- <div (mouseover)="myEvent()">
     mouse over evnt
-</div>
+</div> -->
+{{arrayItem}}
+{{obj.name}} {{obj.age}}
+<br><br>
+<input type="checkbox" value="item_1" (change)="checkboxEvent1($event.target)" > item 1 <br><br>
+<input type="checkbox" value="item_2" (change)="checkboxEvent($event)" > item 2
