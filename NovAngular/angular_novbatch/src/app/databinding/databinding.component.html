@@ -1,0 +1,29 @@
+<p>databinding works!</p>
+<!-- one way db:string interpolation 2 .property binding 3.event binding .
+two db :two way db -->
+
+<!--{{}}string interpolation  .ts -tooo-.html data transmission-->
+<!-- test cases regading interpolation: -->
+{{data}} <!--we can pass property-->
+{{getValue()}}  <!--we can function-->
+{{20+30}} <!--interpollation will allow us to do aruthmatic operations-->
+{{no == 50}} <!--u can use equality opr in intrpolation-->
+<!-- {{no = 40}}  u can not assign value to the property in interpolation-->
+<!-- {{typeOf(no)}}  we can not use type of optr with interpolation-->
+<!-- {{no++}} inc dcr is not possible with interpolation-->
+<br>
+<!-- property binding can handle disabled atrr,but
+     interpollation can not handle disabled attrr -->
+ <input type="text" value="poonam">Name <br> <!--noramal way to display value initially -->
+ <input type="text" value="myName"> <br> <!--myName-->
+ <input type="text" [value]="myName"> <br>
+ <input type="text" value = {{myName}}> <br>
+ <input type="text" [disabled]="disableBox"  ><br>
+ <input type="text" disabled = {{disableBox}} >br
+ <input type="text" disabled>
+ <!-- two way data binding 
+for two way data binding we use ngModel directive so we need to import formsModule-->
+<br><br>
+<input type="text" [(ngModel)] = "surName">
+{{surName}}
+{{changingInpuValue()}}
