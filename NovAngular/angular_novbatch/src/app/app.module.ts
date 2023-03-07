@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -13,12 +15,14 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     UserComponent,
     DatabindingComponent,
+    PagenotfoundComponent,
    
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

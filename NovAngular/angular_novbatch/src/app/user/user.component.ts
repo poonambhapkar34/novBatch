@@ -6,37 +6,49 @@ import { Component } from '@angular/core';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
- inputBoxValue :any;
- inputBoxValue1 :any;
- arrayItem= [10,20,11,33,23323,555];
- obj = {
-  name : 'pooja',
-  age:20
- }
+  inputBoxValue: any;
+  inputBoxValue1: any;
+  arrayItem = [10, 20, 11, 33, 23323, 555];
+  arrayHetroItems = ['sachin',true,1000,50,20,'poonam']
+  obj = {
+    name: 'pooja',
+    age: 20
+  };
+  test?: string;
   checboxValue: any;
-  myFunction(value:any){
-   this.inputBoxValue = value;
+  arrayItemCopy: any = [];
+
+  ngOnInit(){
+     this.arrayTest();
   }
-  myFunction1(data:any){
-    console.log('data',data.target.value);
-    
-   // this.inputBoxValue1 = data.value;
-   }
-  myEvent(){
+  myFunction(value: any) {
+    this.inputBoxValue = value;
+  }
+  myFunction1(data: any) {
+    console.log('data', data.target.value);
+
+    // this.inputBoxValue1 = data.value;
+  }
+  myEvent() {
     console.log('.....');
-    
+
   }
-  checkboxEvent(event:any){
+  checkboxEvent(event: any) {
     console.log(event);
-    
-    console.log('event',event.value);
+
+    console.log('event', event.value);
     this.checboxValue = event.target.value;
   }
-  checkboxEvent1(data:any){
-    console.log('value',data.value);
+  checkboxEvent1(data: any) {
+    console.log('value', data.value);
   }
-  blurEvent(){
+  blurEvent() {
     console.log('blur..');
-    
+
+  }
+  arrayTest() {
+    this.arrayItem.forEach(ele => {
+      this.arrayItemCopy.push(ele);
+    })
   }
 }
