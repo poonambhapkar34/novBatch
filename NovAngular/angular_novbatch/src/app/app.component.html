@@ -15,7 +15,15 @@
 <button routerLink="/dataBinding"> dataBinding </button>&nbsp; &nbsp; 
 <a href="/user">userCompo with href</a> &nbsp; &nbsp; <!--it will refresh our application so all data will lost so do not use -->
 <a routerLink="/user">userCompo with routerLink</a> &nbsp; &nbsp; 
-<button routerLink="/use">wlid card</button>
-<button routerLink="/homeModule-home">home module - home</button>
-<button routerLink="/landing">home module - Landing</button>
+<button routerLink="/use">wlid card</button><br>
+<button routerLink="/homeModule-home">home module - home</button><br>
+<button routerLink="/landing">home module - Landing</button><br>
+<button routerLink="/home-Module/landing">Home Module -Landing</button><br>
+<button routerLink="/home-Module/home">Home Module - home</button><br>
+<button routerLink="/home-Module">Home Module -Initially Landing </button><br>
+<button routerLink="/aboutUs-Module">About Us</button><br>
+<button routerLink="/aboutUs-Module/aboutUsDetails">About Us details</button><br>
+<button routerLink="/admin">Admin</button><br>
+<button (click)="redirect()">Admin by .ts</button><br>
+<button (click)="aboutUsRedirect()">AboutUs Details</button>
 <router-outlet></router-outlet>

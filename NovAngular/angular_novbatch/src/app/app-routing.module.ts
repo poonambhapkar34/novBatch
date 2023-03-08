@@ -11,7 +11,12 @@ const routes: Routes = [
   { path: 'dataBinding', component : DatabindingComponent},
   // { path : '**' , component : PagenotfoundComponent},
   { path : 'homeModule-home', component : HomeComponent},
-  { path : 'landing' , component : LandingComponent}
+  { path : 'landing' , component : LandingComponent},
+
+  //lazy loading concept
+  { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},
+  { path : 'aboutUs-Module', loadChildren:()=>import('./aboutus/aboutus.module').then(mod => mod.AboutusModule) },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({

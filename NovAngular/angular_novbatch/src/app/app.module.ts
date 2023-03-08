@@ -8,6 +8,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeModule } from './home/home.module';
+import { ContactusModule } from './contactus/contactus.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HomeModule
+    // HomeModule,
+    // ContactusModule
   ],
   providers: [],
   bootstrap: [AppComponent]

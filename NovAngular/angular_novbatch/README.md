@@ -46,3 +46,7 @@ steps: 1. folder >>right git bash here >> terminal git clone "url" >> credintial
 if facing error: npm i -f
 again delet node_module folder and again do npm i or npm i -f.
 >>if did successufull installaion of npm pcks>> ng s/cmd will given to u by ur team memers to serve application
+
+ng g c admin
+ng g m admin --routing
+ng g m admin --route admin --module app.module 

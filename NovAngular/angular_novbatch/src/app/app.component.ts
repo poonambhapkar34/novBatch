@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';  // import section : where we add dependency classes
+import { Router } from '@angular/router';
 
 @Component({  //component directive section: metadata about component
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent { //main component class : where we write code logic
  // mySurname2 : string;
  testProperty : any = 5000;
 
-  constructor(){  // constructor : just normal function but it will triger implicity by compiler
+  constructor(private router : Router){  // constructor : just normal function but it will triger implicity by compiler
       console.log('inside constuctor..');
   }
   
@@ -25,6 +26,12 @@ export class AppComponent { //main component class : where we write code logic
   test2(){
     this.mySurname2 = this.mySurname;
     this.test();
+  }
+  redirect(){
+        this.router.navigateByUrl('/admin')
+  }
+  aboutUsRedirect(){
+    this.router.navigateByUrl('/aboutUs-Module/aboutUsDetails')
   }
 
 }
