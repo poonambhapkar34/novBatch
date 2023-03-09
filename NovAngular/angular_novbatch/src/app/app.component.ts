@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent { //main component class : where we write code logic
   title = 'angular_novbatch'; //properties
   myName = 'poonam';
+  car = 'Swift';
   mySurname : string = 'patil';
   mySurname2? : string; //syntax change 
  // mySurname2 : string;
