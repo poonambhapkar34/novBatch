@@ -8,11 +8,28 @@ import { DataService } from 'src/app/data.service';
 })
 export class LandingComponent {
   carName!: string;
+  data:any;
+  fruit:any;
 
 constructor(private dataService: DataService){
 
 }
   ngOnInit(){
-     this.carName =  this.dataService.carName;
+    //get set
+     this.carName =  this.dataService.carName; //getting carname proprty's value
+     this.dataService.fruit = "Orange"; //seeting fruit property's value
   }
+  //to fetch data from service
+  getData(){
+        //get set
+   this.data = this.dataService.data;
+   this.fruit = this.dataService.fruit;
+   console.log('this.fruit ',this.fruit );
+  }
+
+  setData(){
+    this.dataService.fruit = 12333;
+
+  }
+
 }

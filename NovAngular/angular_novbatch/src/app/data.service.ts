@@ -9,7 +9,9 @@ export class DataService {
     age: 30,
     mobNo: 568979999
   };
+
   carName = 'Jaguar';
-  
+  fruit! : any;
+
   constructor() { }
 }

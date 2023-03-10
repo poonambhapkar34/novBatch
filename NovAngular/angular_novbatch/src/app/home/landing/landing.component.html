@@ -1,2 +1,13 @@
 <p>landing works!</p>
 {{carName}}
+
+<button (click)="getData()">getData</button> 
+<button (click)="setData()">set Data</button>
+
+<div *ngIf = "data">
+    {{data.name}}
+</div>
+
+<div *ngIf = "fruit">
+    {{fruit}}
+</div>
