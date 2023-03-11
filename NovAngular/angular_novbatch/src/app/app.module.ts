@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeModule } from './home/home.module';
 import { ContactusModule } from './contactus/contactus.module';
+import { ApplicationLandingComponent } from './application-landing/application-landing.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { ContactusModule } from './contactus/contactus.module';
     UserComponent,
     DatabindingComponent,
     PagenotfoundComponent,
+    ApplicationLandingComponent,
+    HeaderComponent,
    
   ],
   imports: [ //modules

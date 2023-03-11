@@ -17,6 +17,10 @@ console.log('about us module.....');
   imports: [
     CommonModule,
     AboutusRoutingModule
-  ]
+  ],
+  // exports:[
+  //   AboutuslandingComponent,
+  //   AboutusdetailsComponent,
+  // ]
 })
 export class AboutusModule { }

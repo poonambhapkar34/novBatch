@@ -10,7 +10,7 @@ export class DataService {
     mobNo: 568979999
   };
 
-  carName = 'Jaguar';
+  carName = 'Jaguar...';
   fruit! : any;
 
   constructor() { }
