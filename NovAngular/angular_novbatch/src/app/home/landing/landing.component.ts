@@ -10,6 +10,7 @@ export class LandingComponent {
   carName!: string;
   data:any;
   fruit:any;
+  studentName!: string;
 
 constructor(private dataService: DataService){
 
@@ -26,10 +27,24 @@ constructor(private dataService: DataService){
    this.fruit = this.dataService.fruit;
    console.log('this.fruit ',this.fruit );
   }
-
   setData(){
     this.dataService.fruit = 12333;
-
   }
 
+ //aternate way of get and set:dont use this
+  getStudentName() {
+    this.studentName = this.dataService.getStudentName();
+    console.log('studentName', this.studentName);
+  }
+  setStudentName(){
+    let name = 'Priya';
+    this.dataService.setStudentName(name);
+    console.log(this.dataService.studentName);
+  }
+
+  //reusablity of function
+  multiplication(){
+    let res = this.dataService.multication(20,30);
+    console.log('res',res);
+    }
 }
