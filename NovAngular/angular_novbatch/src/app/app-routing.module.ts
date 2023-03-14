@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutuslandingComponent } from './aboutus/aboutuslanding/aboutuslanding.component';
 import { ApplicationLandingComponent } from './application-landing/application-landing.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { DirectivesComponent } from './directives/directives.component';
 import { HomeComponent } from './home/home/home.component';
 import { LandingComponent } from './home/landing/landing.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'dataBinding', component : DatabindingComponent},
   { path : 'homeModule-home', component : HomeComponent},
   { path : 'landing' , component : LandingComponent},
+  //{ path: 'aboutUsLanding', component :AboutuslandingComponent},dont do like this
+  { path : 'directives' , component : DirectivesComponent},
   
   //lazy loading concept
   { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},

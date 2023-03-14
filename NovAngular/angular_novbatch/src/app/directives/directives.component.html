@@ -1,0 +1,27 @@
+<!-- directives can be classified in 3 categories based on how they behave:
+
+Component Directives : main class
+Structural Directives *ngIf, *ngFor, *ngSwitch
+Attribute Directives
+Component Directives: Component directives are used in main class. They contain the detail of how the component should be processed, instantiated and used at runtime.
+Structural Directives: Structural directives start with a * sign.
+ These directives are used to manipulate and change the structure of the DOM elements.
+ For example, *ngIf directive, *ngSwitch directive, and *ngFor directive. 
+*ngIf Directive: The ngIf allows us to Add/Remove DOM Element.
+*ngSwitch Directive: The *ngSwitch allows us to Add/Remove DOM Element. It is similar to switch statement of C#.
+*ngFor Directive: The *ngFor directive is used to repeat a portion
+ of HTML template once per each item from an iterable list (Collection).-->
+
+<p *ngIf="para">paragraph.....</p>
+
+<div class="main" *ngIf="show">
+divvv...
+<p></p>
+    <h1>h1111</h1>
+
+</div>
+
+<button (click)="hideDiv()">hide</button>
+<button (click)="showDiv()">show</button>
+
+<button (click)="toggle1()">toggle</button>

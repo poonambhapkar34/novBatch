@@ -11,6 +11,7 @@ import { HomeModule } from './home/home.module';
 import { ContactusModule } from './contactus/contactus.module';
 import { ApplicationLandingComponent } from './application-landing/application-landing.component';
 import { HeaderComponent } from './header/header.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
     PagenotfoundComponent,
     ApplicationLandingComponent,
     HeaderComponent,
+    DirectivesComponent,
    
   ],
   imports: [ //modules
