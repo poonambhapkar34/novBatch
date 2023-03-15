@@ -13,6 +13,7 @@ export class DirectivesComponent {
   show :any =23;
  items = [10,20,30,40];
  showStudentData : boolean = true;
+ imgName = 'assests/image/tom.jpg';
   student = [
     {
       name: 'Raj',
