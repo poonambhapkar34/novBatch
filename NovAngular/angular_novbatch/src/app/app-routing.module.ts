@@ -16,12 +16,13 @@ const routes: Routes = [
   { path: 'dataBinding', component : DatabindingComponent},
   { path : 'homeModule-home', component : HomeComponent},
   { path : 'landing' , component : LandingComponent},
-  //{ path: 'aboutUsLanding', component :AboutuslandingComponent},dont do like this
+  { path: 'aboutUsLanding', component :AboutuslandingComponent},
+   //dont do like this
   { path : 'directives' , component : DirectivesComponent},
   
   //lazy loading concept
   { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},
-  { path : 'aboutUs-Module', loadChildren:()=>import('./aboutus/aboutus.module').then(mod => mod.AboutusModule) },
+ // { path : 'aboutUs-Module', loadChildren:()=>import('./aboutus/aboutus.module').then(mod => mod.AboutusModule) },
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'test' , loadChildren:()=> import('./test/test.module').then(mod => mod.TestModule)  },
  

@@ -15,8 +15,8 @@ Structural Directives: Structural directives start with a * sign.
 <p *ngIf="para">paragraph.....</p>
 
 <div class="main" *ngIf="show">
-divvv...
-<p></p>
+    divvv...
+    <p></p>
     <h1>h1111</h1>
 
 </div>
@@ -24,4 +24,19 @@ divvv...
 <button (click)="hideDiv()">hide</button>
 <button (click)="showDiv()">show</button>
 
-<button (click)="toggle1()">toggle</button>
+<button (click)="toggle1()">toggle</button><br>
+
+{{items}}
+
+<div *ngFor="let item of items">
+    <p>{{item}}--1</p>
+    <p>{{item}}---2</p>
+</div>
+
+<div *ngIf="showStudentData">
+    <ul *ngFor="let studentData of student">
+        <li>{{studentData.name}}</li>
+        <li>{{studentData.age}}</li>
+        <li>{{studentData.hobby}}</li>
+    </ul>
+</div>
