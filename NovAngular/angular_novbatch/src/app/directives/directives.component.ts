@@ -6,14 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.scss']
 })
 export class DirectivesComponent {
-  
-  para : any;
+
+  para: any;
   //Note:property para = undefine/false = false ; 
   //property para = value:any data type or true = true
-  show :any =23;
- items = [10,20,30,40];
- showStudentData : boolean = true;
- imgName = 'assests/image/tom.jpg';
+  show: any = false;
+  items = [10, 20, 30, 40];
+  showStudentData: boolean = true;
+  imgName = 'assests/image/tom.jpg';
+  color ='pink';
+  styleProperty = 'main2';
+  stylePropertyNew = 2000000;
+  multipleStyle = 'Bhapkar';
   student = [
     {
       name: 'Raj',
@@ -36,15 +40,20 @@ export class DirectivesComponent {
       hobby: 'Swimming'
     },
   ]
-  hideDiv(){
-    this.show = false;
+  // hideDiv() {
+  //   this.show = false;
+  // }
+  hidShowDiv(value:boolean) {
+    this.show = value;
   }
-  showDiv(){
+  showDiv() {
     this.show = true;
   }
 
-  toggle1(){
+  toggle1() {
     this.show = !this.show; //!undefined or !false  = true
-   
+  }
+  switchColors(color:string){
+    this.color = color;
   }
 }
