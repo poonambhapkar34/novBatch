@@ -63,14 +63,36 @@ ngStyle Directive: The ngStyle directive facilitates you to modify the style of
 an HTML element using the expression. You can also use ngStyle directive to 
 dynamically change the style of your HTML element. -->
 <div class="main main2">56565656655</div>
+
 <div [ngClass]="styleProperty ? styleProperty : 'main' ">
 </div>
 <br>
 
+<!-- important -->
 <div [ngClass]="stylePropertyNew ? 'main2' : 'main' ">
-
+    property
 </div>
 
-<div [class.main]="multipleStyle == 'poonam'" [class.main2]="multipleStyle == 'patil'"
+<div [ngClass]="setClass()">
+    function
+</div>
+
+<!-- important -->
+<div [class.main]="multipleStyle == 'poonam'" 
+     [class.main2]="multipleStyle == 'patil'"
     [class.main3]="multipleStyle== 'Bhapkar'">
+</div>
+
+<!-- //not to use -->
+<p [ngStyle]="{'background-color':inLineCss =='red'?inLineCss:'blue'}">paragraph</p>
+
+<!-- important -->
+<div>
+    <h1 [class.main]="headingProperty"
+        [class.main2]="!headingProperty">
+        heading 1
+    </h1>
+    <h2>
+        heading 2
+    </h2>
 </div>

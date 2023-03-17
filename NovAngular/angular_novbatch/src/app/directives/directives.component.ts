@@ -18,6 +18,8 @@ export class DirectivesComponent {
   styleProperty = 'main2';
   stylePropertyNew = 2000000;
   multipleStyle = 'Bhapkar';
+  inLineCss='red';
+  headingProperty :any;
   student = [
     {
       name: 'Raj',
@@ -55,5 +57,8 @@ export class DirectivesComponent {
   }
   switchColors(color:string){
     this.color = color;
+  }
+  setClass():any{
+    return 'main';
   }
 }

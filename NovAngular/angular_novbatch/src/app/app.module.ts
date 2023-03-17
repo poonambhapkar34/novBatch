@@ -12,6 +12,8 @@ import { ContactusModule } from './contactus/contactus.module';
 import { ApplicationLandingComponent } from './application-landing/application-landing.component';
 import { HeaderComponent } from './header/header.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { CharactersonlyDirective } from './charactersonly.directive';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { DirectivesComponent } from './directives/directives.component';
     ApplicationLandingComponent,
     HeaderComponent,
     DirectivesComponent,
+    CharactersonlyDirective,
+    FormComponent,
    
   ],
   imports: [ //modules

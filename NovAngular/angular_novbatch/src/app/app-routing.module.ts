@@ -4,6 +4,7 @@ import { AboutuslandingComponent } from './aboutus/aboutuslanding/aboutuslanding
 import { ApplicationLandingComponent } from './application-landing/application-landing.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home/home.component';
 import { LandingComponent } from './home/landing/landing.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'aboutUsLanding', component :AboutuslandingComponent},
    //dont do like this
   { path : 'directives' , component : DirectivesComponent},
+  { path:'form', component : FormComponent},
   
   //lazy loading concept
   { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},
