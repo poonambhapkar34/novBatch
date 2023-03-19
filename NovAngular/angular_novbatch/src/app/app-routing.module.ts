@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutuslandingComponent } from './aboutus/aboutuslanding/aboutuslanding.component';
+import { ReactiveformComponent } from './angularforms/reactiveform/reactiveform.component';
 import { ApplicationLandingComponent } from './application-landing/application-landing.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -21,13 +22,14 @@ const routes: Routes = [
    //dont do like this
   { path : 'directives' , component : DirectivesComponent},
   { path:'form', component : FormComponent},
+  { path:'reactiveForm', component:ReactiveformComponent},
   
   //lazy loading concept
   { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},
  // { path : 'aboutUs-Module', loadChildren:()=>import('./aboutus/aboutus.module').then(mod => mod.AboutusModule) },
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'test' , loadChildren:()=> import('./test/test.module').then(mod => mod.TestModule)  },
- 
+  { path:'angularFormsModule', loadChildren : ()=> import('./angularforms/angularforms.module').then(m => m.AngularformsModule) },
   { path : '**' , component : PagenotfoundComponent},
 ];
 

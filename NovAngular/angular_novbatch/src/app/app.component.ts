@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent { //main component class : where we write code logic
-  title = 'angular_novbatch'; //properties
+  public title = 'angular_novbatch'; //properties
   myName = 'poonam';
   car = 'Swift';
   mySurname : string = 'patil';
@@ -19,7 +19,7 @@ export class AppComponent { //main component class : where we write code logic
       console.log('inside constuctor..');
   }
   
-  test(){
+  public test(){
     var xyz = 100;
     this.mySurname2 = 'Jadhav';
   }
@@ -33,6 +33,12 @@ export class AppComponent { //main component class : where we write code logic
   }
   aboutUsRedirect(){
     this.router.navigateByUrl('/aboutUs-Module/aboutUsDetails')
+  }
+  reactiveFormRedirect(){
+    this.router.navigateByUrl('/reactiveForm')
+  }
+  reactiveFormRedirectByLazy(){
+    this.router.navigateByUrl('/angularFormsModule/reactiveForm')
   }
 
 }

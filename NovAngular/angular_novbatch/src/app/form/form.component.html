@@ -1,4 +1,28 @@
 
 <form>
-   Enter Your Name : <input type="text" appCharactersonly>
+   Enter Your First Name : <input type="text" appCharactersonly ><br>
+   Enter Your Last Name : <input type="text" appCharactersonly > <br>
+   <h2>{{title | uppercase}}</h2>
+   <h2>{{title | lowercase}}</h2>
+   <h2>{{title | titlecase}}</h2>
+   <p>{{todayDate | date}}</p>
+   <p>{{todayDate | date : "MM/dd/yyyy"}}</p>
+   <p>{{today}}</p>
+   <p>{{todayDate2}}</p>
+
+   <input type="text" [(ngModel)]="inputBoxValue" [ngModelOptions]="{standalone: true}">
+
+   <table class="table-main">
+      <tr>
+         <th>Employee Name</th>
+         <th>Employee Age</th>
+         <th>Employee Sallary</th>
+      </tr>
+      <tr  *ngFor="let empData of employee | searchtext:inputBoxValue" >
+         <td>{{empData.name}}</td>
+         <td>{{empData.age}}</td>
+         <td>{{empData.salary}}</td>
+      </tr>
+   </table>
+
 </form>

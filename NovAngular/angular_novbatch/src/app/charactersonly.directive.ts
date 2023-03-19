@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 console.log('inside directive');
 
 @Directive({
@@ -7,6 +7,12 @@ console.log('inside directive');
 export class CharactersonlyDirective {
 
 
-  constructor() { console.log('inside directive');}
+  constructor(private elementRef : ElementRef) { console.log('inside directive');}
   
+  @HostListener ('input' , ["$event"] ) 
+  onInputBoxChange(){
+      console.log('CharactersonlyDirective..');
+       var inputBoxInitialValue  = this.elementRef.nativeElement.value;
+      this.elementRef.nativeElement.value =  inputBoxInitialValue.replace(/[^a-zA-Z]*/g, '')
+  }
 }

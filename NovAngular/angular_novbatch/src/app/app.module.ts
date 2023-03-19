@@ -14,6 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { CharactersonlyDirective } from './charactersonly.directive';
 import { FormComponent } from './form/form.component';
+import { AngularformsModule } from './angularforms/angularforms.module';
+import { SearchtextPipe } from './searchtext.pipe';
 
 
 @NgModule({
@@ -27,15 +29,18 @@ import { FormComponent } from './form/form.component';
     DirectivesComponent,
     CharactersonlyDirective,
     FormComponent,
+    SearchtextPipe,
    
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+   // AngularformsModule
     // HomeModule,
     // ContactusModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
