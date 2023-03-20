@@ -6,11 +6,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchtextPipe implements PipeTransform {
 
   transform(arrayOfObject: any, inputSearchBoxValue: any): any {
+  
     console.log('value',arrayOfObject);
     console.log('args',inputSearchBoxValue);
-    if(!arrayOfObject){
-      return null;
-    }
+    // if(!arrayOfObject){
+    //   return null;
+    // }
     if(!inputSearchBoxValue){
         return arrayOfObject;
     }

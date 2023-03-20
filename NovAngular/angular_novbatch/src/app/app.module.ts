@@ -16,6 +16,7 @@ import { CharactersonlyDirective } from './charactersonly.directive';
 import { FormComponent } from './form/form.component';
 import { AngularformsModule } from './angularforms/angularforms.module';
 import { SearchtextPipe } from './searchtext.pipe';
+import { CurrencyPipe1 } from './currency.pipe';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SearchtextPipe } from './searchtext.pipe';
     CharactersonlyDirective,
     FormComponent,
     SearchtextPipe,
+    CurrencyPipe1,
    
   ],
   imports: [ //modules
