@@ -5,6 +5,7 @@ import { AboutusRoutingModule } from './aboutus-routing.module';
 import { AboutuslandingComponent } from './aboutuslanding/aboutuslanding.component';
 import { AboutusdetailsComponent } from './aboutusdetails/aboutusdetails.component';
 import { TestComponent } from './test/test.component';
+import { SharedModule } from '../shared/shared.module';
 
 console.log('about us module.....');
 
@@ -16,7 +17,8 @@ console.log('about us module.....');
   ],
   imports: [
     CommonModule,
-    AboutusRoutingModule
+    AboutusRoutingModule,
+    SharedModule
   ],
   // exports:[
   //   AboutuslandingComponent,

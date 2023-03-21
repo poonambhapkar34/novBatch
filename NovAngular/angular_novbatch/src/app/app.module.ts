@@ -7,16 +7,13 @@ import { UserComponent } from './user/user.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { HomeModule } from './home/home.module';
-import { ContactusModule } from './contactus/contactus.module';
 import { ApplicationLandingComponent } from './application-landing/application-landing.component';
 import { HeaderComponent } from './header/header.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { CharactersonlyDirective } from './charactersonly.directive';
 import { FormComponent } from './form/form.component';
-import { AngularformsModule } from './angularforms/angularforms.module';
 import { SearchtextPipe } from './searchtext.pipe';
-import { CurrencyPipe1 } from './currency.pipe';
+import { SharedModule } from './shared/shared.module';
+
 
 
 @NgModule({
@@ -28,16 +25,17 @@ import { CurrencyPipe1 } from './currency.pipe';
     ApplicationLandingComponent,
     HeaderComponent,
     DirectivesComponent,
-    CharactersonlyDirective,
+  
     FormComponent,
     SearchtextPipe,
-    CurrencyPipe1,
+  
    
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    SharedModule,
    // AngularformsModule
     // HomeModule,
     // ContactusModule
