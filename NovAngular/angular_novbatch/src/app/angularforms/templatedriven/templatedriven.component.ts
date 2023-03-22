@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./templatedriven.component.scss']
 })
 export class TemplatedrivenComponent {
-
+  submit(values:any){
+    console.log('formValues',values);
+    
+  }
 }

@@ -11,7 +11,7 @@ export class FormComponent {
     today = new Date();
     todayDate2: any
     inputBoxValue :any;
-    amount = 200;
+    amountInDoller = 200;
     test! : number
    employee = [
     {name:'Raj', age:40, salary : 40000},

@@ -24,8 +24,8 @@
       </tr>
    </table>
   <br><br>
-   <input type="text" placeholder=" Enter amount ...." [(ngModel)] = "amount" [ngModelOptions]="{standalone: true}">
-  <br> &#8377;{{amount | currency1}} 
+   <input type="text" placeholder=" Enter amount ...." [(ngModel)] = "amountInDoller" [ngModelOptions]="{standalone: true}">
+  <br> &#8377;{{amountInDoller | currency1}} 
    <!-- {{amount|currency:"INR"}} -->
    <br>
   {{5000 |currency:"INR" }}

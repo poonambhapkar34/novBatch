@@ -1,4 +1,19 @@
-<p>templatedriven works!</p>
-<input type="text" appCharactersonly> Enter Name
+<!-- <p>templatedriven works!</p> -->
+<!-- <input type="text" appCharactersonly> Enter Name
 <input type="text" appNumbersOnly> Enter Mob No
-{{500 | currency1 }}
+{{500 | currency1 }} -->
+
+<form #loginForm = "ngForm" autocomplete="off">
+    <h3> Login Form</h3>
+    <!-- <label>Enter your Full Name: </label><br> -->
+    <input type="text" ngModel name="fullName" #fullName="ngModel" required minlength="5" placeholder="Enetr a Name"><br>
+    <span > Hint : Enter You Full Name</span><br>
+    <span class="error" *ngIf="fullName.touched && fullName.errors?.['required']">Name is required</span>
+    <span class="error" *ngIf="fullName.errors?.['minlength']">Enter atleast 5 characters</span><br>
+   
+    <!-- <label>Enter a Password</label><br> -->
+    <input type="text" ngModel name="password"><br>  
+    <span> Enter a Password</span><br><br>
+
+     <button (click)="submit(loginForm.value)">Submit</button>
+</form>

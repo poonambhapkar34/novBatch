@@ -29,16 +29,19 @@ export class AppComponent { //main component class : where we write code logic
     this.test();
   }
   redirect(){
-        this.router.navigateByUrl('/admin')
+        this.router.navigateByUrl('/admin');
   }
   aboutUsRedirect(){
-    this.router.navigateByUrl('/aboutUs-Module/aboutUsDetails')
+    this.router.navigateByUrl('/aboutUs-Module/aboutUsDetails');
   }
   reactiveFormRedirect(){
-    this.router.navigateByUrl('/reactiveForm')
+    this.router.navigateByUrl('/reactiveForm');
   }
   reactiveFormRedirectByLazy(){
-    this.router.navigateByUrl('/angularFormsModule/reactiveForm')
+    this.router.navigateByUrl('/angularFormsModule/reactiveForm');
+  }
+  templateDrivenForm(){
+    this.router.navigateByUrl('/angularFormsModule/templateDrivenForm');
   }
 
 }
