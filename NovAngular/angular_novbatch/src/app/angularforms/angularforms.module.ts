@@ -6,6 +6,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 
 //import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ReactiveformComponent,
     TemplatedrivenComponent,
+    LoginsuccessComponent,
    
     
   ],

@@ -13,6 +13,6 @@ export class CharactersonlyDirective {
   onInputBoxChange(){
       console.log('CharactersonlyDirective..');
        var inputBoxInitialValue  = this.elementRef.nativeElement.value;
-      this.elementRef.nativeElement.value =  inputBoxInitialValue.replace(/[^a-zA-Z]*/g, '')
+      this.elementRef.nativeElement.value =  inputBoxInitialValue.replace(/[^a-zA-Z0-9-, ]*/g, '')
   }
 }

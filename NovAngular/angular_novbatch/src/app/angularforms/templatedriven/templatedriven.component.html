@@ -3,17 +3,27 @@
 <input type="text" appNumbersOnly> Enter Mob No
 {{500 | currency1 }} -->
 
-<form #loginForm = "ngForm" autocomplete="off">
+<form #loginForm="ngForm" autocomplete="off" class="form-container">
     <h3> Login Form</h3>
     <!-- <label>Enter your Full Name: </label><br> -->
-    <input type="text" ngModel name="fullName" #fullName="ngModel" pattern="[A-Za-z]*$" required minlength="5" placeholder="Enetr a Name"><br>
-    <span > Hint : Enter You Full Name</span><br>
-    <span class="error" *ngIf="fullName.touched && fullName.errors?.['required'] && !fullName.valid ">Name is required</span>
+    <input type="text" ngModel name="fullName" #fullName="ngModel" pattern="[A-Za-z]*$" required minlength="5"
+        placeholder="Enetr a Name"><br>
+    <span> Hint : Enter You Full Name</span><br>
+    <span class="error" *ngIf="fullName.touched && fullName.errors?.['required'] && !fullName.valid ">Name is
+        required</span>
     <span class="error" *ngIf="fullName.errors?.['minlength']">Enter atleast 5 characters</span><br>
-    <span class="error" *ngIf="fullName.touched && !fullName.valid && fullName.errors?.['pattern'] && !fullName.errors?.['minlength']">Name is Invalid please Enter proper Name</span><br>
-    <!-- <label>Enter a Password</label><br> -->
-    <input type="text" ngModel name="password"><br>  
-    <span> Enter a Password</span><br><br>
+    <span class="error"
+        *ngIf="fullName.touched && !fullName.valid && fullName.errors?.['pattern'] && !fullName.errors?.['minlength']">Name
+        is Invalid please Enter proper Name</span><br>
+    <label>Enter Address</label><br>
+    <input class="address-ipuntBox" type="text" ngModel name="address" #address="ngModel" appCharactersonly required minlength="5"><br>
+    <span class="error" *ngIf="address.touched && address.errors?.['required']">address is required</span>
 
-     <button (click)="submit(loginForm.value)">Submit</button>
+    <br>
+    <!-- <label>Enter a Password</label><br> -->
+
+    <input type="text" ngModel name="password"><br>
+    <span> Enter a Password</span><br><br>
+    <!-- [disabled]="loginForm.invalid" -->
+    <button [disabled]="!loginForm.valid" (click)="submit(loginForm.value)">Submit</button>
 </form>

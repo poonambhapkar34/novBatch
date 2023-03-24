@@ -20,6 +20,8 @@ export class DataService {
     age: 30,
     mobNo: 9568979999
   }
+  formName!: string;
+  
   constructor() { }
 
   getStudentName(){
