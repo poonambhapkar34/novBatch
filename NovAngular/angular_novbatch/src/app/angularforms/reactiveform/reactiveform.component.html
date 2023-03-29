@@ -1,1 +1,46 @@
 <p>reactiveform works!</p>
+
+<form [formGroup]="studentDataForm">
+
+    <label>First Name<span *ngIf="studentDataForm.get('name')?.touched
+        && studentDataForm.get('name')?.errors?.['required']" class="errors">*</span></label>
+    <br>
+    <input type="text" formControlName="name">
+    <br>
+
+    <span class="errors" *ngIf="studentDataForm.get('name')?.touched
+     && studentDataForm.get('name')?.errors?.['required']"> Name is required</span>
+    <span class="errors" *ngIf="studentDataForm.get('name')?.touched &&
+     studentDataForm.get('name')?.errors?.['minlength']">
+        Atleast 5 characters expected
+    </span><br>
+
+    <label>Last Name<span *ngIf="studentDataForm.get('lastName')?.touched
+        && studentDataForm.get('lastName')?.errors?.['required']" class="errors">*</span></label>
+    <br>
+    <input type="text" formControlName="lastName"><br>
+    <span class="errors" *ngIf="(studentDataForm.get('lastName')?.touched || studentDataForm.get('lastName')?.dirty)  
+    && studentDataForm.get('lastName')?.errors?.['pattern']">please match pattern</span>
+
+    <span class="errors" *ngIf="studentDataForm.get('lastName')?.touched 
+    && studentDataForm.get('lastName')?.errors?.['required']">Last Name is required</span>
+
+    <br> <label>mob no</label>
+    <br>
+    <input type="text" formControlName="mobileNo"><br>
+    <span class="errors"
+        *ngIf="studentDataForm.get('mobileNo')?.errors?.['pattern'] && !studentDataForm.get('mobileNo')?.errors?.['maxlength']">
+        Pattern not mached
+    </span>
+    <br>
+    <span class="errors"
+        *ngIf="studentDataForm.get('mobileNo')?.errors?.['maxlength'] && !studentDataForm.get('mobileNo')?.errors?.['pattern'] ">
+        maxlength is 10 digits
+    </span>
+    <br>
+
+    <input type="checkbox" formControlName="tnc">Please accept terms and condition
+    <br><br><br>
+
+    <button [disabled]="studentDataForm.invalid" (click)="submit()">submit</button>
+</form>

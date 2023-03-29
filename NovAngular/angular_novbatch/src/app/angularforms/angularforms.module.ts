@@ -5,7 +5,7 @@ import { AngularformsRoutingModule } from './angularforms-routing.module';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { SharedModule } from '../shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 
 //import { BrowserModule } from '@angular/platform-browser';
@@ -24,7 +24,8 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
    // BrowserModule,
     AngularformsRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   // exports:[
   //   ReactiveformComponent,
