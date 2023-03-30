@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-reactiveform',
@@ -11,7 +12,9 @@ export class ReactiveformComponent {
 
   studentDataForm!: FormGroup;
   mySurName!:string;
-  constructor(private formBuilder: FormBuilder) {
+  showPassword : boolean = false;
+  constructor(private formBuilder: FormBuilder,
+    private dataService : DataService) {
   }
 
   ngOnInit(){
@@ -25,7 +28,8 @@ export class ReactiveformComponent {
       name : ['',[Validators.required,Validators.minLength(5)]],
       mobileNo :['',[Validators.required,Validators.pattern("[0-9]*$"),Validators.maxLength(10)]],
       tnc :[true,[Validators.requiredTrue]],
-      lastName:['',[Validators.required,Validators.pattern("[a-zA-Z]*$")]]
+      lastName:['',[Validators.required,Validators.pattern("[a-zA-Z]*$")]],
+      title:['',[Validators.required,this.dataService.wordValidator]]
     })
   }
    
@@ -33,4 +37,9 @@ export class ReactiveformComponent {
   submit(){
    console.log(this.studentDataForm.value);
   }
+  showPasswordFun(){
+    this.showPassword = !this.showPassword;
+  }
+
+
 }

@@ -35,4 +35,14 @@ export class DataService {
    multication(num1:number, num2:number){
      return num1 * num2;
    }
+     //tiTle,TITLe,TITLE,titLE
+   wordValidator(inputValue:any){
+    console.log('..............',inputValue.value);
+    let inputdata = inputValue.value?.toLowerCase();
+    console.log('inputdata',inputdata);
+    let isInclude = inputdata?.includes('title');
+    console.log('isInclude',isInclude);
+    return isInclude ? {isValid : true} : null;
+    
+    }
 }
