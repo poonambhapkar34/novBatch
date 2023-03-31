@@ -18,7 +18,7 @@
     <label>Last Name<span *ngIf="studentDataForm.get('lastName')?.touched
         && studentDataForm.get('lastName')?.errors?.['required']" class="errors">*</span></label>
     <br>
-    <input type="text" formControlName="lastName"><br>
+    <input type="text" formControlName="lastName" ><br>
     <span class="errors" *ngIf="(studentDataForm.get('lastName')?.touched || studentDataForm.get('lastName')?.dirty)  
     && studentDataForm.get('lastName')?.errors?.['pattern']">please match pattern</span>
 
@@ -38,8 +38,29 @@
         maxlength is 10 digits
     </span>
     <br>
-    <label>Password</label>
-    <input [type]="showPassword ? 'text' : 'password'"><span><button (click)="showPasswordFun()">show</button></span>
+    <label >City</label><br>
+    <select formControlName="city" >
+        <!-- <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+        <option value="Satara">Satara</option>
+        <option value="Sangli">Sangli</option> -->
+        <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+
+    </select>
+
+    <br><br>
+    <label>Password</label><br>
+    <input [type]="showPassword ? 'text' : 'password'" formControlName="password"
+    (keyup)="passwordValition($event)">
+    <span><button (click)="showPasswordFun()">show</button></span><br>
+    <span class="errors" *ngIf="isMatched">Password not matched</span>
+    <br><br> 
+
+    <label>Confirm Password</label><br>
+    <input [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword"
+    (keyup)="confirmPasswordValition($event)">
+    <span><button (click)="showPasswordFun()">show</button></span><br>
+    <span class="errors" *ngIf="isMatched">Password not matched</span>
     <br><br> 
 
     <label>Title</label>

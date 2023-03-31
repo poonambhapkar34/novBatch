@@ -12,7 +12,11 @@ export class ReactiveformComponent {
 
   studentDataForm!: FormGroup;
   mySurName!:string;
+  cities = ['Mumbai','Pune','Satara','Sangli'];
   showPassword : boolean = false;
+  password: any;
+  confirmPassword: any;
+  isMatched :boolean = false;
   constructor(private formBuilder: FormBuilder,
     private dataService : DataService) {
   }
@@ -29,10 +33,34 @@ export class ReactiveformComponent {
       mobileNo :['',[Validators.required,Validators.pattern("[0-9]*$"),Validators.maxLength(10)]],
       tnc :[true,[Validators.requiredTrue]],
       lastName:['',[Validators.required,Validators.pattern("[a-zA-Z]*$")]],
-      title:['',[Validators.required,this.dataService.wordValidator]]
+      title:['',[Validators.required,this.dataService.wordValidator]],
+      city :[''],
+      password:[''],
+      confirmPassword:['']
     })
   }
    
+
+  passwordValition(inputPassword:any){
+    console.log('pass',inputPassword.target.value);
+    this.password = inputPassword.target.value;
+    if(this.password ==  this.confirmPassword  ){
+      this.isMatched = false;
+    }
+    else{
+     this.isMatched = true;
+    }
+    
+  }
+  confirmPasswordValition(confirmPass:any){
+     this.confirmPassword = confirmPass.target.value;
+     if(this.password ==  this.confirmPassword  ){
+       this.isMatched = false;
+     }
+     else{
+      this.isMatched = true;
+     }
+  }
 
   submit(){
    console.log(this.studentDataForm.value);

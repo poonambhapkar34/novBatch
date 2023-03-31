@@ -13,6 +13,7 @@ export class LoginsuccessComponent {
    }
 
    ngOnInit(){
+    //getting here formName property
    this.userName = this.dataService.formName;
    }
 }

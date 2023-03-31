@@ -44,5 +44,5 @@ export class DataService {
     console.log('isInclude',isInclude);
     return isInclude ? {isValid : true} : null;
     
-    }
+    } 
 }
