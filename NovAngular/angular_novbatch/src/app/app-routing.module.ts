@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home/home.component';
 import { LandingComponent } from './home/landing/landing.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { UserComponent } from './user/user.component';
+import { AppLandingComponent } from './app-landing/app-landing.component';
 
 const routes: Routes = [
   //simple routing of globle components
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path : 'directives' , component : DirectivesComponent},
   { path:'form', component : FormComponent},
   { path:'reactiveForm', component:ReactiveformComponent},
+  { path:'appLanding', component : AppLandingComponent},
+
   
   //lazy loading concept
   { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},

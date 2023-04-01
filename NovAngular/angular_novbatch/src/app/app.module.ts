@@ -13,6 +13,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { FormComponent } from './form/form.component';
 import { SearchtextPipe } from './searchtext.pipe';
 import { SharedModule } from './shared/shared.module';
+import { AppLandingComponent } from './app-landing/app-landing.component';
 
 
 
@@ -28,6 +29,7 @@ import { SharedModule } from './shared/shared.module';
   
     FormComponent,
     SearchtextPipe,
+    AppLandingComponent,
   
    
   ],

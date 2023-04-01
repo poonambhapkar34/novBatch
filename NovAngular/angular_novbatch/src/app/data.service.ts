@@ -21,6 +21,7 @@ export class DataService {
     mobNo: 9568979999
   }
   formName!: string;
+  cityNameService :any
   
   constructor() { }
 
