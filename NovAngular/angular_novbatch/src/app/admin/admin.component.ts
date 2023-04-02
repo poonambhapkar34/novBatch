@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -10,7 +10,9 @@ export class AdminComponent {
 
   @Input() cityName: any;
   @Input() fruits :any;
-
+  @Input() table:any;
+  @Output() childData = new EventEmitter<any> ()
+ 
   test: any;
   cityFromService : any;
 
@@ -20,9 +22,17 @@ export class AdminComponent {
      ngOnInit() {
       this.cityFromService = this.dataService.cityNameService;
       console.log(' this.cityFromService', this.cityFromService);
+      console.log(this.table);
+      
       
      }
      data(){
       this.cityFromService = this.dataService.cityNameService;
+     }
+
+     favFruit(data:any){
+       console.log(data.target.value);
+       let value = data.target.value;
+       this.childData.emit(value);
      }
 }

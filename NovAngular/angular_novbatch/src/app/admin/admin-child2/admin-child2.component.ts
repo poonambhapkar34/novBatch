@@ -9,4 +9,5 @@ export class AdminChild2Component {
 
   @Input() cityNameChild2 : any;
   @Input() car :any;
+  @Input() objData :any
 }

@@ -4,7 +4,23 @@
 <div class="container">
     <h1> {{cityName}} </h1>
     <h2> {{cityFromService}}</h2>
-    <h3>{{fruits}}</h3>
-   
+    <h3>{{fruits[1]}}</h3><br>
+
+   child data(Fav fruit): <input type="text" (keyup)="favFruit($event)"> <br>
+ 
+   <div *ngIf="table">
+     <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mobno</th>
+        </tr>
+        <tr *ngFor="let tableData of table">
+            <td>{{tableData.name}}</td>
+            <td>{{tableData.age}}</td>
+            <td>{{tableData.mobno}}</td>
+        </tr>
+     </table>
+   </div>
    
 </div>

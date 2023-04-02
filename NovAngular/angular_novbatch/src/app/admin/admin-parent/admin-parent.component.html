@@ -1,4 +1,3 @@
-
 <!-- Data transmission technics in angular:
 
 if compo dont have relation:
@@ -10,10 +9,13 @@ If component is having relation between them
 1. Parent to child data transfer @Input()
 2. Child to parent data transfer @Output()-->
 <div class="inp">
+    <br><br>
     Enter City: <input type="text" (keyup)="parentData($event)"><br>
+    <h1>{{dataFromChild}}</h1>
 </div><br><br>
-<app-admin [cityName]="parentCityName" [fruits]="fruit" ></app-admin><br><br>
-<app-admin-child2  [cityNameChild2]="parentCityName" [car]="cars"></app-admin-child2><br><br>
+<app-admin [cityName]="parentCityName" [fruits]="fruit" (childData)="getChildData($event)"
+[table]="parentTable"></app-admin><br><br>
+<app-admin-child2 [cityNameChild2]="parentCityName"
+[objData]="obj" [car]="cars"></app-admin-child2><br><br>
 
 <!-- <button routerLink="/admin/adminChild">child</button> Not useful when components are live-->
-
