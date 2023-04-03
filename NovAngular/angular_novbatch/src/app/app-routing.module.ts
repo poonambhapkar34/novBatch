@@ -11,6 +11,8 @@ import { LandingComponent } from './home/landing/landing.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { UserComponent } from './user/user.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { LifecyclesHooksComponent } from './lifecycles-hooks/lifecycles-hooks.component';
+import { LifeCycleParentComponent } from './life-cycle-parent/life-cycle-parent.component';
 
 const routes: Routes = [
   //simple routing of globle components
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path:'form', component : FormComponent},
   { path:'reactiveForm', component:ReactiveformComponent},
   { path:'appLanding', component : AppLandingComponent},
+  { path :'lifeCycleHooks', component:LifecyclesHooksComponent},
+  { path :'lifeCycleParent', component:LifeCycleParentComponent},
 
   
   //lazy loading concept

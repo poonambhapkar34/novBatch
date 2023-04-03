@@ -14,6 +14,8 @@ import { FormComponent } from './form/form.component';
 import { SearchtextPipe } from './searchtext.pipe';
 import { SharedModule } from './shared/shared.module';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { LifecyclesHooksComponent } from './lifecycles-hooks/lifecycles-hooks.component';
+import { LifeCycleParentComponent } from './life-cycle-parent/life-cycle-parent.component';
 
 
 
@@ -30,6 +32,8 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
     FormComponent,
     SearchtextPipe,
     AppLandingComponent,
+    LifecyclesHooksComponent,
+    LifeCycleParentComponent,
   
    
   ],
