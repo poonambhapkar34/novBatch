@@ -13,6 +13,7 @@ import { UserComponent } from './user/user.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
 import { LifecyclesHooksComponent } from './lifecycles-hooks/lifecycles-hooks.component';
 import { LifeCycleParentComponent } from './life-cycle-parent/life-cycle-parent.component';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 const routes: Routes = [
   //simple routing of globle components
@@ -29,7 +30,7 @@ const routes: Routes = [
   { path:'appLanding', component : AppLandingComponent},
   { path :'lifeCycleHooks', component:LifecyclesHooksComponent},
   { path :'lifeCycleParent', component:LifeCycleParentComponent},
-
+  { path :'subject', component :SubjectsComponent},
   
   //lazy loading concept
   { path : 'home-Module', loadChildren : () => import('./home/home.module').then(mod => mod.HomeModule)},

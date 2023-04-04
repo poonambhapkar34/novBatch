@@ -6,23 +6,41 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./lifecycles-hooks.component.scss']
 })
 export class LifecyclesHooksComponent {
- @Input() parentData :any;
+  @Input() parentData: any;
   //8 lF hooks :ngOnChanges,ngOnInit,ngDoCheck,
   //ngAfterContentInit,ngAfterContentChecked,
-//ngAfterViewInit,AfterViwChecked,OnDestroy.
-
-  ngOnChanges(){
-   // ngOnChanges():Called before ngOnInit() (if the component has bound inputs) 
-   //and whenever one or more data-bound input properties change.
+  //ngAfterViewInit,AfterViwChecked,OnDestroy.
+ constructor(){
+  console.log('constructor...');
+ }
+  ngOnChanges() {
+    // ngOnChanges():Called before ngOnInit() (if the component has bound inputs) 
+    //and whenever one or more data-bound input properties change.
     console.log('ngOnChanges child....');
-   }
-  
-   ngOnInit() {
-    console.log('ngOnInit  child.....');
-    console.log("parentData",this.parentData);
   }
 
-  ngDoCheck(){
+  ngOnInit() {
+    console.log('ngOnInit  child.....');
+    console.log("parentData", this.parentData);
+  }
+
+  ngDoCheck() {
     console.log('ngDocheck  child.....');
   }
+  ngAfterContentInit(){
+
+    console.log('aftercontentInit  child.....');
+  }
+  ngAfterContentChecked(){
+    console.log('aftercontentchecked  child.....');
+  }
+  ngAfterViewInit(){
+    console.log('afterviewInit child...');
+   }
+   ngAfterViewChecked(){
+    console.log('ngAfterViewChecked child...');
+   }
+   ngOnDestroy(){
+    console.log('ngOndestroy child...');
+   }
 }

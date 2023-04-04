@@ -16,6 +16,8 @@ import { SharedModule } from './shared/shared.module';
 import { AppLandingComponent } from './app-landing/app-landing.component';
 import { LifecyclesHooksComponent } from './lifecycles-hooks/lifecycles-hooks.component';
 import { LifeCycleParentComponent } from './life-cycle-parent/life-cycle-parent.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { SubjectOneComponent } from './subject-one/subject-one.component';
 
 
 
@@ -34,6 +36,8 @@ import { LifeCycleParentComponent } from './life-cycle-parent/life-cycle-parent.
     AppLandingComponent,
     LifecyclesHooksComponent,
     LifeCycleParentComponent,
+    SubjectsComponent,
+    SubjectOneComponent,
   
    
   ],

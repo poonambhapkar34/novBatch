@@ -1,5 +1,7 @@
 
-<input type="text" [(ngModel)]="test" >
+<input type="text" [(ngModel)]="test" ><br><br>
+<button (click)="setData()">click to set subject data</button>
+<input type="text">
 <h1>parent</h1>
 ............................................
 <app-lifecycles-hooks [parentData]="test"></app-lifecycles-hooks>
