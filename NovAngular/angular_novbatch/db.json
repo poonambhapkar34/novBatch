@@ -1,0 +1,142 @@
+{
+  "admin": [
+    {
+      "name": "Poonam",
+      "city": "Mumbai",
+      "mobNo": 8779180087,
+      "password": "Poonam@123",
+      "confirmPassword": "Poonam@123",
+      "id": 1
+    },
+    {
+      "name": "Pooja",
+      "city": "Pune",
+      "mobNo": 6565555598,
+      "password": "Pooja@123",
+      "confirmPassword": "Pooja@123",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "name": "Santosh",
+      "city": "Thane",
+      "mobNo": 7777918087,
+      "password": "santosh@123",
+      "confirmPassword": "Santosh@123",
+      "id": 2
+    },
+    {
+      "name": "Shree",
+      "city": "Thane",
+      "mobNo": 8888885255,
+      "password": "shree@123",
+      "confirmPassword": "shree@123",
+      "id": 4
+    },
+    {
+      "name": "duggu",
+      "city": "pune",
+      "mobNo": 88666688,
+      "id": 5,
+      "password": "Sayali@123",
+      "confirmPassword": "Sayali@123"
+    },
+    {
+      "name": "Sayali",
+      "city": "Thane",
+      "mobNo": 8888885255,
+      "password": "Sayali@123",
+      "confirmPassword": "Sayali@123",
+      "id": 6
+    }
+  ],
+  "owner": [
+    {
+      "name": "poonam",
+      "city": "Mumbai",
+      "mobNo": 8779180087,
+      "password": "Poonam@123",
+      "confirmPassword": "Poonam@123",
+      "id": 1
+    },
+    {
+      "name": "Sagar",
+      "city": "Thane",
+      "mobNo": 7777918087,
+      "password": "sagar@123",
+      "confirmPassword": "sagar@123",
+      "id": 2
+    },
+    {
+      "name": "Shree",
+      "city": "Thane",
+      "mobNo": 8888885255,
+      "password": "shree@123",
+      "confirmPassword": "shree@123",
+      "id": 4
+    }
+  ],
+  "hotelDetails": [
+    {
+      "hotelName": "Sayaji",
+      "city": "Kolhapur",
+      "hotelMobNo": 8779180087,
+      "roomAvailable": "yes",
+      "hotelMenu": "Panir Tikka",
+      "checkInTime": "10.00 AM",
+      "checkOutTime": "09.00 AM",
+      "T&C": true,
+      "price": 1500,
+      "id": 1
+    },
+    {
+      "hotelName": "Oberoy",
+      "city": "Mumbai",
+      "hotelMobNo": 9898989890,
+      "roomAvailable": "yes",
+      "hotelMenu": "Panir Tikka",
+      "checkInTime": "10.00 AM",
+      "checkOutTime": "09.00 AM",
+      "T&C": true,
+      "price": 1600,
+      "id": 2
+    },
+    {
+      "hotelName": "Taj",
+      "city": "Mumbai",
+      "hotelMobNo": 999999999,
+      "roomAvailable": "yes",
+      "hotelMenu": "Panir masala",
+      "checkInTime": "10.00 AM",
+      "checkOutTime": "09.00 AM",
+      "T&C": true,
+      "price": 1500,
+      "id": 3
+    },
+    {
+      "hotelName": "Star",
+      "city": "Thane",
+      "hotelMobNo": 999999999,
+      "roomAvailable": "yes",
+      "hotelMenu": "Panir masala",
+      "checkInTime": "10.00 AM",
+      "checkOutTime": "09.00 AM",
+      "T&C": true,
+      "price": 1500,
+      "id": 4
+    },
+    {
+      "hotelName": "Raga Hotel",
+      "city": "Kolhapur",
+      "hotelMobNo": 8779180087,
+      "roomAvailable": "yes",
+      "hotelMenu": "Panir Tikka",
+      "checkInTime": "10.00 AM",
+      "checkOutTime": "09.00 AM",
+      "T&C": true,
+      "price": 1500,
+      "id": "ad123"
+    }
+  ]
+}
