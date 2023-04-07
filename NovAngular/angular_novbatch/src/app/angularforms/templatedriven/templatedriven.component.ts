@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
+import { CommonApiCallService } from '../common-api-call.service';
 
 
 @Component({
@@ -10,11 +11,23 @@ import { DataService } from 'src/app/data.service';
 })
 export class TemplatedrivenComponent {
   fname! : string;
+  ownerUrl = "http://localhost:3000/owner";
+  ownerData:any;
 
   constructor(private dataService: DataService,
-    private router: Router){
+    private router: Router,
+    private commonApiCallService: CommonApiCallService){
 
   }
+
+  GetOwnerData(){
+   this.commonApiCallService.getUser(this.ownerUrl).subscribe(res=>{
+    this.ownerData = res
+    console.log('res',res)
+  })
+}
+   
+
   submit(values:any){ 
     console.log('formValues',values);
     console.log(values.fullName);
