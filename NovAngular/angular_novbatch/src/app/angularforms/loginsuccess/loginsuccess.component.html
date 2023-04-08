@@ -1,2 +1,7 @@
 <h2>WelCome {{userName}}</h2>
 <button (click)="getUserData()">user </button>
+<div>
+  <ul *ngFor="let hotelData of this.hotelDetails ">
+    <li>{{hotelData.hotelName}}</li>
+  </ul>
+</div>

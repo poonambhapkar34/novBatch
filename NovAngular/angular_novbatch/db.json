@@ -49,6 +49,47 @@
       "password": "Sayali@123",
       "confirmPassword": "Sayali@123",
       "id": 6
+    },
+    {
+      "name": "shital",
+      "city": "Thane",
+      "mobNo": 7777918087,
+      "password": "shital@123",
+      "confirmPassword": "shital@123",
+      "id": 7
+    },
+    {
+      "name": "shranya",
+      "mobileNo": "44444",
+      "tnc": true,
+      "lastName": "bhapkar",
+      "title": "test",
+      "city": "Mumbai",
+      "password": "shar123",
+      "confirmPassword": "shar123",
+      "id": 8
+    },
+    {
+      "name": "shranya1",
+      "mobileNo": "44444",
+      "tnc": true,
+      "lastName": "bhapkar",
+      "title": "test",
+      "city": "Mumbai",
+      "password": "shar123",
+      "confirmPassword": "shar123",
+      "id": 9
+    },
+    {
+      "name": "shriya",
+      "mobileNo": "44444",
+      "tnc": true,
+      "lastName": "bhapkar",
+      "title": "test",
+      "city": "Mumbai",
+      "password": "shar123",
+      "confirmPassword": "shar123",
+      "id": 10
     }
   ],
   "owner": [

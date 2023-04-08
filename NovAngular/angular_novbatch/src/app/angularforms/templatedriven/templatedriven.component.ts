@@ -11,7 +11,8 @@ import { CommonApiCallService } from '../common-api-call.service';
 })
 export class TemplatedrivenComponent {
   fname! : string;
-  ownerUrl = "http://localhost:3000/owner";
+ // ownerUrl = "http://localhost:3000/owner";
+  endPoint = "owner";
   ownerData:any;
 
   constructor(private dataService: DataService,
@@ -21,7 +22,7 @@ export class TemplatedrivenComponent {
   }
 
   GetOwnerData(){
-   this.commonApiCallService.getUser(this.ownerUrl).subscribe(res=>{
+   this.commonApiCallService.getApiCall(this.endPoint).subscribe(res=>{
     this.ownerData = res
     console.log('res',res)
   })

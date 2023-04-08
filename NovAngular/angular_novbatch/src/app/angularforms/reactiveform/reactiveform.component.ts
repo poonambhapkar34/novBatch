@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/data.service';
+import { CommonApiCallService } from '../common-api-call.service';
 
 @Component({
   selector: 'app-reactiveform',
@@ -18,7 +19,8 @@ export class ReactiveformComponent {
   confirmPassword: any;
   isMatched :boolean = false;
   constructor(private formBuilder: FormBuilder,
-    private dataService : DataService) {
+    private dataService : DataService,
+    private commonApiCallService: CommonApiCallService) {
   }
 
   ngOnInit(){
@@ -63,7 +65,11 @@ export class ReactiveformComponent {
   }
 
   submit(){
-   console.log(this.studentDataForm.value);
+    let endPoint = "user"
+    console.log('form data',this.studentDataForm.value);
+      this.commonApiCallService.postApiCall(endPoint, this.studentDataForm.value).subscribe(respo=>{
+
+      })
   }
   showPasswordFun(){
     this.showPassword = !this.showPassword;
