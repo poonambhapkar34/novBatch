@@ -9,9 +9,9 @@
       "id": 1
     },
     {
-      "name": "Pooja",
+      "name": "shrinivas",
       "city": "Pune",
-      "mobNo": 6565555598,
+      "mobNo": "99999999",
       "password": "Pooja@123",
       "confirmPassword": "Pooja@123",
       "id": 2
@@ -20,8 +20,15 @@
   "user": [
     {
       "name": "Santosh",
-      "city": "Thane",
-      "mobNo": 7777918087,
+      "city": ["Thane","pune"],
+      "mobNo": [
+        {
+          "key1":7777918087
+        },
+        {
+          "key2":5555
+        }
+      ],
       "password": "santosh@123",
       "confirmPassword": "Santosh@123",
       "id": 2
@@ -81,15 +88,48 @@
       "id": 9
     },
     {
-      "name": "shriya",
-      "mobileNo": "44444",
+      "name": "vvvvvvvvvv",
+      "mobileNo": "455555555",
       "tnc": true,
-      "lastName": "bhapkar",
-      "title": "test",
-      "city": "Mumbai",
-      "password": "shar123",
-      "confirmPassword": "shar123",
+      "lastName": "ggggg",
+      "title": "vvv",
+      "city": "Satara",
+      "password": "vvv",
+      "confirmPassword": "vvv",
       "id": 10
+    },
+    {
+      "name": "aaqqq",
+      "mobileNo": "3333",
+      "tnc": true,
+      "lastName": "aa",
+      "title": "qqq",
+      "city": "Pune",
+      "password": "qqq",
+      "confirmPassword": "qqq",
+      "id": 11
+    },
+    {
+      "name": "wwwww",
+      "mobileNo": "44444444",
+      "tnc": true,
+      "lastName": "wwwww",
+      "title": "444",
+      "city": "Satara",
+      "password": "444",
+      "confirmPassword": "444",
+      "id": 12
+    },
+    {
+      "name": "shrinivas",
+      "mobileNo": "99999999",
+      "tnc": true,
+      "lastName": "jadhav",
+      "title": "rrrr",
+      "city": "Satara",
+      "password": "rrrr",
+      "confirmPassword": "rrrr",
+      "id": 13
     }
   ],
   "owner": [

@@ -1,5 +1,8 @@
 <p>reactiveform works!</p>
 
+<input type="text" (keydown)="data($event)">1
+<input type="text" #inpBox (keyup)="data1(inpBox.value)">2
+<input type="text" [(ngModel)]="boxValue" (keydown)="data2()">3
 <form [formGroup]="studentDataForm">
 
     <label>First Name<span *ngIf="studentDataForm.get('name')?.touched
