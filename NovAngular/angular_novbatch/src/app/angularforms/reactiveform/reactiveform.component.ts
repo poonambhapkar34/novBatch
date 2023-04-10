@@ -19,6 +19,7 @@ export class ReactiveformComponent {
   confirmPassword: any;
   isMatched: boolean = false;
   boxValue: any;
+  hide:any
   constructor(private formBuilder: FormBuilder,
     private dataService: DataService,
     private commonApiCallService: CommonApiCallService) {
@@ -93,5 +94,14 @@ export class ReactiveformComponent {
   data2() {
     console.log('boxValue', this.boxValue);
 
+  }
+  patApiCall(){
+    let data = {
+      mobNo: this.studentDataForm.value.mobileNo,
+      name: this.studentDataForm.value.name,
+      password:this.studentDataForm.value.password,
+      confirmPassword :this.studentDataForm.value.confirmPassword
+    }
+    this.commonApiCallService.putApiCall('admin',data,2).subscribe(respo=>{})
   }
 }

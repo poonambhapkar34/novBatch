@@ -3,6 +3,9 @@
 <input type="text" (keydown)="data($event)">1
 <input type="text" #inpBox (keyup)="data1(inpBox.value)">2
 <input type="text" [(ngModel)]="boxValue" (keydown)="data2()">3
+<button (click)="patApiCall()">putApi</button><br>
+<button mat-raised-button color="accent">Accent</button><br>
+<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
 <form [formGroup]="studentDataForm">
 
     <label>First Name<span *ngIf="studentDataForm.get('name')?.touched
@@ -54,12 +57,30 @@
     <br><br>
     <label>Password</label><br>
     <input [type]="showPassword ? 'text' : 'password'" formControlName="password"
-    (keyup)="passwordValition($event)">
-    <span><button (click)="showPasswordFun()">show</button></span><br>
+    (keyup)="passwordValition($event)"  >
+    <!-- <span><button (click)="showPasswordFun()">show</button></span><br> -->
+    
     <span class="errors" *ngIf="isMatched">Password not matched</span>
     <br><br> 
-
-    <label>Confirm Password</label><br>
+    <mat-form-field appearance="fill" class="fld">
+        <input
+          matInput
+          placeholder="myPlaceholder"
+          class="inp"
+        >
+        <mat-icon>visibility</mat-icon>
+      </mat-form-field>
+<br>      
+<div class = "example of Prefix & suffix text">
+    <mat-form-field appearance="fill">
+        <mat-label> Enter your password </mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"> <mat-icon> {{hide ? 'visibility_off' : 'visibility'}} </mat-icon>
+        </button>
+    </mat-form-field>
+    </div>
+         <label>Confirm Password</label><br>
     <input [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword"
     (keyup)="confirmPasswordValition($event)">
     <span><button (click)="showPasswordFun()">show</button></span><br>

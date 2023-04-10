@@ -7,9 +7,10 @@ import { TemplatedrivenComponent } from './templatedriven/templatedriven.compone
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 //import { BrowserModule } from '@angular/platform-browser';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
     AngularformsRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   // exports:[
   //   ReactiveformComponent,

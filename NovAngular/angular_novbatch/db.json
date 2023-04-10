@@ -9,24 +9,26 @@
       "id": 1
     },
     {
-      "name": "shrinivas",
-      "city": "Pune",
-      "mobNo": "99999999",
-      "password": "Pooja@123",
-      "confirmPassword": "Pooja@123",
+      "mobNo": "",
+      "name": "",
+      "password": "",
+      "confirmPassword": "",
       "id": 2
     }
   ],
   "user": [
     {
       "name": "Santosh",
-      "city": ["Thane","pune"],
+      "city": [
+        "Thane",
+        "pune"
+      ],
       "mobNo": [
         {
-          "key1":7777918087
+          "key1": 7777918087
         },
         {
-          "key2":5555
+          "key2": 5555
         }
       ],
       "password": "santosh@123",

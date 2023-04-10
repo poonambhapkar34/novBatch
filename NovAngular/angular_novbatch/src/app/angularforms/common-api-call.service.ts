@@ -6,6 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class CommonApiCallService {
  
+ 
 
   url = "http://localhost:3000/";
   constructor(private http: HttpClient) { }
@@ -29,6 +30,10 @@ export class CommonApiCallService {
   patchApiCall(endpoint: string,data: any,id:number) {
     let url = this.url + endpoint + '/' + id ;
     return this.http.patch(url, data)
+  }
+  putApiCall(endpoint:string, data:any, id:number) {
+    let url = this.url + endpoint + '/' + id ;
+    return this.http.put(url, data)
   }
 
 }

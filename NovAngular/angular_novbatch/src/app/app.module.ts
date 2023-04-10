@@ -18,7 +18,8 @@ import { LifecyclesHooksComponent } from './lifecycles-hooks/lifecycles-hooks.co
 import { LifeCycleParentComponent } from './life-cycle-parent/life-cycle-parent.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectOneComponent } from './subject-one/subject-one.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -47,6 +48,8 @@ import { HttpClientModule } from '@angular/common/http'
     FormsModule,
     SharedModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+ 
    // AngularformsModule
     // HomeModule,
     // ContactusModule
