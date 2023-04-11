@@ -5,3 +5,29 @@
     <li>{{hotelData.hotelName}}</li>
   </ul>
 </div>
+<form [formGroup]="matForm">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+    <mat-hint>Please enter name</mat-hint>
+    <mat-error *ngIf="matForm.get('name')?.touched ">name is required</mat-error>
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <mat-label>Mobno</mat-label>
+    <input matInput type="text" formControlName="mobno">
+    <mat-hint>Please enter mob no</mat-hint>
+    <mat-error *ngIf="matForm.get('mobno')?.touched ">mob no is required</mat-error>
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <mat-label>password</mat-label>
+    <input matInput type="text" formControlName="pass">
+    <mat-icon matSuffix (click)="visiblity()">visibility</mat-icon>
+    <mat-hint>Please enter password</mat-hint>
+    <mat-error *ngIf="matForm.get('pass')?.touched ">password is required</mat-error>
+  </mat-form-field><br>
+
+  <button mat-raised-button color="primary">submit</button>
+</form>
